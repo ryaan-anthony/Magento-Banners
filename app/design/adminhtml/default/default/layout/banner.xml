@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_slide_index>
+        <reference name="content">
+            <block type="banner/adminhtml_slide" name="slide_index" />
+        </reference>
+    </adminhtml_slide_index>
+
+    <adminhtml_slide_edit>
+        <update handle="editor" />
+        <reference name="content">
+            <block type="banner/adminhtml_slide_edit" name="slide_edit" />
+        </reference>
+    </adminhtml_slide_edit>
+</layout>

@@ -1,0 +1,38 @@
+<?php
+/*
+ * @see Ip_Banner_Block_Widget
+ */
+?>
+<?php
+    $_helper = Mage::helper('banner');
+?>
+<div class="banner group">
+    <div class="banner-slides cycle-slideshow"
+         data-cycle-speed="<?php echo $_helper->getOption('speed');?>"
+         data-cycle-manual-speed="<?php echo $_helper->getOption('manual_speed');?>"
+         data-cycle-timeout="<?php echo $_helper->getOption('timeout');?>"
+         data-cycle-fx="<?php echo $_helper->getOption('fx');?>"
+         data-cycle-slides=".banner-slide"
+         data-cycle-pager=".banner-nav"
+         data-cycle-pager-template="<a>&bull;</a>"
+         data-cycle-pager-active-class="activeSlide"
+        >
+        <div class="banner-nav"></div>
+        <?php foreach($this->getSlides() as $_slide):?>
+            <div class="banner-slide">
+                <div class="banner-image">
+                    <a href="<?php echo $_slide->getUrl();?>">
+                        <img src="<?php echo $_slide->getImageUrl();?>"
+                             title="<?php echo $this->stripTags($_slide->getTitle());?>"
+                             width="<?php echo $_slide->getWidth();?>"
+                             height="<?php echo $_slide->getHeight();?>"
+                             alt="" />
+                    </a>
+                </div>
+                <div class="banner-text">
+                    <?php echo $_helper->filter($_slide->getContent());?>
+                </div>
+            </div>
+        <?php endforeach;?>
+    </div>
+</div>
