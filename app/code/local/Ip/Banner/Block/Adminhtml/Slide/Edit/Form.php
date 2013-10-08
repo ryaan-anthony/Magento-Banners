@@ -67,8 +67,6 @@ class Ip_Banner_Block_Adminhtml_Slide_Edit_Form extends Mage_Adminhtml_Block_Wid
         $fieldset->addField('content', 'editor', array(
             'label'     => Mage::helper('banner')->__('Content'),
             'config'    => Mage::getSingleton('cms/wysiwyg_config')->getConfig(),
-            'class'     => 'required-entry',
-            'required'  => true,
             'name'      => 'content',
             'style'     => 'width:700px; height:500px;',
             'wysiwyg'   => true,
