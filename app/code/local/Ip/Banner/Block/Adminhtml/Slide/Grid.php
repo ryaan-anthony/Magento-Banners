@@ -45,6 +45,13 @@ class Ip_Banner_Block_Adminhtml_Slide_Grid extends Mage_Adminhtml_Block_Widget_G
             'align'     =>'left',
             'index'     => 'url',
         ));
+        $this->addColumn('status', array(
+            'header'    => Mage::helper('banner')->__('Status'),
+            'align'     =>'right',
+            'width'     => '50px',
+            'index'     => 'status',
+            'renderer' => 'banner/adminhtml_renderer_status',
+        ));
 
         return parent::_prepareColumns();
     }

@@ -30,6 +30,23 @@ class Ip_Banner_Block_Adminhtml_Slide_Edit_Form extends Mage_Adminhtml_Block_Wid
             'name'      => 'title',
         ));
 
+        $fieldset->addField('status', 'select', array(
+            'label'     => Mage::helper('banner')->__('Status'),
+            'style'     =>  'width:700px;',
+            'name'      => 'status',
+            'values'    => array(
+                array(
+                    'value'     => 1,
+                    'label'     => Mage::helper('banner')->__('Enabled'),
+                ),
+
+                array(
+                    'value'     => 0,
+                    'label'     => Mage::helper('banner')->__('Disabled'),
+                ),
+            ),
+        ));
+
         $fieldset->addField('url', 'text', array(
             'label'     => Mage::helper('banner')->__('Url'),
             'style'     =>  'width:700px;',

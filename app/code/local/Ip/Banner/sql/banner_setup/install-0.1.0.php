@@ -9,6 +9,7 @@ $installer->run("
         `content` text,
         `url` varchar(255),
         `image` varchar(255),
+        `status` int(1) NOT NULL DEFAULT '1',
         `position` int(11) NOT NULL DEFAULT '0',
         PRIMARY KEY (`slide_id`)
     );
